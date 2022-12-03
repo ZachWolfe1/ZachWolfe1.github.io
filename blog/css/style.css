@@ -1,0 +1,262 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/* import font */
+@font-face{
+    font-family:"ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"robotoslab";
+    src: url('../fonts/serif/robotoslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"rozhaone";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"josefinslab";
+    src: url('../fonts/serif/josefinslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"montserrat";
+    src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face{
+    font-family:"roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+/* typrograhpgy */
+p{
+    font-family: opensans,Arial,sans-serif;
+}
+
+h1,h2,h3,h4{
+    font-family: josefinslab, sans-serif, Helvetica;
+    letter-spacing: 0.0325rem; 
+}
+h1{
+    font-size: 3rem;
+    letter-spacing: 0.125rem;
+    transform: rotate(-3deg);
+}
+
+.highlight{
+    display: inline-block;
+    font-family: ultra ,Helvetica, sans-serif;
+    border: 1px solid black;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    border-top-left-radius:1rem ;
+    border-bottom-right-radius:1rem ;
+    color: #F28705;
+    background-color: #A60303;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+aside p{
+    font-size: 0.75rem;
+}
+/* genral setup and defaults */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+/* layout */
+header{
+    padding: 0.5rem 1rem 1rem 0;
+    text-align: center;
+}
+h2{
+    padding-top: 2.5rem;
+}
+nav{
+    margin-top: 0.5rem;
+    border-top: 1px solid #282828;
+    border-bottom: 1px solid #282828;
+}
+.main-section{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #282828;
+    padding-left: 0.75rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+}
+aside p {
+    border-bottom: 1px solid #282828;
+    padding-bottom: 3rem;
+}
+
+.subsection{
+    display: flex;
+    margin: 1rem 0rem;
+}
+footer{
+    padding-top: 3rem;
+}
+
+.email-link{
+    float: left;
+}
+.attribution{
+    float: right;
+}
+.expand{
+    font-size: 0.5rem;
+}
+/* Images and figures */
+
+img{
+width: 100%;
+}
+
+figure{
+    margin: 0px;
+}
+
+.article-image{
+    width: 33%;
+    float: left;
+    margin-right: 0.5rem;
+}
+.subsection figure{
+
+    margin: 0rem 0.25rem;
+    background-color: #F2B84B;
+}
+
+.subsection figcaption{
+    padding: 0.5rem 0.5rem;
+}
+aside img{
+    width: 75%;
+}
+/* links and nav */
+
+a{
+    text-decoration: none;
+ }
+
+ nav a{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    font-family: rozhaone, arial, sans-serif;
+    color: #618C03;
+ }
+ nav a:focus,
+ nav a:hover{
+     color: #D9A441;
+     background-color: #591902;
+ }
+ 
+ nav a:active {
+     color: #F2B705;
+     background-color: #591902;
+ }
+ button{
+    display: inline-block;
+    font-family: ultra ,Helvetica, sans-serif;
+    font-size: 2.5rem;
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    border-radius: 0.3rem;
+    border-top-left-radius:1rem ;
+    border-bottom-right-radius:1rem ;
+    border-top-right-radius:1rem;
+    border-bottom-left-radius:1rem;
+    color: #F28705;
+    background-color: #A60303;
+    box-shadow: 5px 5px 4px -1px #888;
+ }
+
